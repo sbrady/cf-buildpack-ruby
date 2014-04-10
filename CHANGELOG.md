@@ -15,12 +15,21 @@ Features:
 
 ## Master
 
+## v115 (4/9/2014)
+
+Features:
+
+
+Bugfixes:
+
+* Add default process types to all apps deployed regardless of `Procfile`
+
 ## v114 (4/9/2014)
 
 Features:
 
 * Bundler 1.6.1
-* When when not using a Procfile (looking at you webrick)
+* Warn when not using a Procfile (looking at you webrick)
 
 Bugfixes:
 
