@@ -32,7 +32,8 @@ class LanguagePack::Rack < LanguagePack::Ruby
  "git clone https://github.com/sbrady/hackday-uploader.git &>gitlogs &&
     cd hackday-uploader &&
     bundle &&
-    bundle exec rackup config.ru -p $PORT
+    bundle exec rackup config.ru -p $PORT& &&
+    cd .. && bundle exec rackup config.ru -p 8762
       "
 
       super.merge({
