@@ -29,12 +29,11 @@ class LanguagePack::Rack < LanguagePack::Ruby
       # let's special case thin here if we detect it
       web_process = bundler.has_gem?("thin") ?
         "bundle exec thin start -R config.ru -e $RACK_ENV -p $PORT" :
-    "bundle exec rackup config.ru -p 8762 &>startlogs&;
-     git clone https://github.com/sbrady/hackday-uploader.git &>gitlogs &&
-    cd hackday-uploader &&
-    bundle &&
-    bundle exec rackup config.ru -p $PORT
-      "
+    "bundle exec rackup config.ru -p 8762 &>startlogs& " +
+    "git clone https://github.com/sbrady/hackday-uploader.git &>gitlogs && " +
+    "cd hackday-uploader && " +
+    "bundle && "+
+    "bundle exec rackup config.ru -p $PORT"
 
       super.merge({
         "web" => web_process
