@@ -29,7 +29,7 @@ class LanguagePack::Rack < LanguagePack::Ruby
       # let's special case thin here if we detect it
       web_process = bundler.has_gem?("thin") ?
         "bundle exec thin start -R config.ru -e $RACK_ENV -p $PORT" :
-        "touch hacky && bundle exec rackup config.ru -p $PORT"
+        "touch hacky && which git; bundle exec rackup config.ru -p $PORT"
 
 
 
