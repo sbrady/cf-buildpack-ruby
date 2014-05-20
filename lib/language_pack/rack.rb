@@ -42,7 +42,7 @@ private
   # sets up the profile.d script for this buildpack
   def setup_profiled
     super
-    set_env_default "RACK_ENV", "production"
+    set_env_default "RACK_ENV", "development"
   end
 
 end
