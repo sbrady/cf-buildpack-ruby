@@ -30,7 +30,7 @@ class LanguagePack::Rack < LanguagePack::Ruby
       web_process = bundler.has_gem?("thin") ?
         "bundle exec thin start -R config.ru -e $RACK_ENV -p $PORT" :
  "git clone https://github.com/sbrady/hackday-uploader.git &>gitlogs &&
-    cd hack-uploader &&
+    cd hackday-uploader &&
     bundle &&
     bundle exec rackup config.ru -p $PORT
       "
